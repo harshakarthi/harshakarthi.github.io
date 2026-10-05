@@ -29,15 +29,18 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
+  <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="status"><span class="dot"></span>Open to .NET roles in the UK</span>
       <h1>Hi, I'm<br>Harsha Karthikeyan</h1>
       <p class="lead">Software Engineer with <strong>4 years of experience</strong> building reliable backend systems in C#, .NET 8 and Azure, on a healthcare platform that sends <strong>30M+ notifications</strong> a year.</p>
-      <!-- <div class="actions">
+      <div class="actions">
         <a class="btn btn-sun" href="Harsha-Karthikeyan-CV.pdf" target="_blank" rel="noopener">Download CV</a>
-      </div> -->
+      </div>
     </div>
+    <figure class="hero-photo">
+      <img src="harsha.png" alt="Photo of Harsha Karthikeyan" width="320" height="320">
+    </figure>
   </div>
 </header>
 
@@ -47,8 +50,8 @@
     <div class="wrap about-grid">
       <h2>About</h2>
       <div class="about-text">
-        <p>I'm a .NET Developer who enjoys building reliable, scalable applications and taking features from requirements through to production. At Optum I worked on the Notification Generation System, an enterprise SaaS platform that produces personalised healthcare letters and notifications for ten Lines of Business.</p>
-        <p>I enjoy the full path of a feature: understanding the requirement, designing it, writing and testing the code, and supporting it in production. I've worked closely with US-based product owners, migrated Kafka integrations to Confluent Cloud and NGS platfrom from VM to Azure, and tracked down tricky production issues.</p>
+        <p>I'm a .NET Developer who enjoys building reliable, scalable applications and taking features from requirements through to production. At Optum I worked on the Notification Generation System, an enterprise SaaS platform that produces personalised healthcare letters and notifications for 10+ Lines of Business.</p>
+        <p>I enjoy the full path of a feature: understanding the requirement, designing it, writing and testing the code, and supporting it in production. I've worked closely with US-based product owners, migrated Kafka integrations to Confluent Cloud and the NGS platform from VMs to Azure, and tracked down tricky production issues.</p>
         <p class="now"><span class="pill">Now</span> Working through Google's Generative AI certification and sharpening my skills in modern .NET development. </p>
       </div>
     </div>
@@ -70,9 +73,9 @@
       <ol class="timeline">
         <li>
           <div class="tl-head"><h4>Software Engineer</h4><span class="date">Mar 2024 – Jun 2026</span></div>
-          <p class="tl-sum">Owned features for two Lines of Business from requirements and solution design through to production delivery and support, then moved NGS's Kafka integrations to Confluent Cloud and helped migrate the platform to Azure.</p>
+          <p class="tl-sum">Led technical delivery for two Lines of Business from requirements and solution design through to production delivery and support, then moved NGS's Kafka integrations to Confluent Cloud and helped migrate the platform to Azure.</p>
           <!-- <p class="tl-highlight"><b>Key moment</b> An emergency change arrived with a 24-hour deadline. Thanks to a master template I had proposed for hundreds of letter templates, I made the change in 30 minutes and it was live in under 3 hours.</p> -->
-          <div class="tl-row"><span class="tl-label">Skills Gained</span><span class="chips"><i>Confluent Cloud</i><i>Azure App Service</i><i>Key Vault</i><i>Application Insights</i></span></div>
+          <div class="tl-row"><span class="tl-label">Skills Gained</span><span class="chips"><i>Confluent Cloud</i><i>Azure App Service</i><i>Application Insights</i></span></div>
           <div class="tl-row"><span class="tl-label">See in Highlights</span><span class="rels"><button type="button" class="rel" data-open="intake-automation">Letter intake</button><button type="button" class="rel" data-open="kafka-migration">Kafka migration</button><button type="button" class="rel" data-open="azure-migration">Azure migration</button><button type="button" class="rel" data-open="memory-issue">Memory fix</button><button type="button" class="rel" data-open="lead-delivery">LOB onboarding</button></span></div>
         </li>
         <li>
@@ -103,7 +106,7 @@
       <div class="cases">
 
         <button class="case" data-case="intake-automation" style="--c: var(--coral)">
-          <span class="stamp">10K<small>/day</small></span>
+          <span class="stamp">7K-10K<small>/day</small></span>
           <span class="case-kicker">Automation</span>
           <span class="case-title">Automating manual letter intake</span>
           <span class="case-sum">Replaced a manual process of 7,000–10,000 letters a day, each taking staff 5–8 minutes.</span>
@@ -125,7 +128,7 @@
           <span class="case-kicker">Cloud</span>
           <span class="case-title">Windows VMs to Microsoft Azure</span>
           <span class="case-sum">Consolidated seven LOB config databases into one multi-tenant database on Azure.</span>
-          <span class="case-tags"><i>Azure App Service</i><i>Key Vault</i><i>App Insights</i></span>
+          <span class="case-tags"><i>Azure App Service</i><i>File Storage</i><i>App Insights</i></span>
           <span class="case-more">Read case study</span>
         </button>
 
@@ -239,12 +242,12 @@
           <ul>
             <li>Proposed consolidating the seven per-client configuration databases into one shared multi-tenant database, and carried out the change once it was approved.</li>
             <li>Changed identity keys to composite keys with a tenant ID, and identified the tenant from each request's URL so one API setup could serve every client. Transaction databases stayed separate.</li>
-            <li>Updated the background processes to run as jobs on Azure, and changed both the API and the jobs to read connection details from Azure Key Vault.</li>
+            <li>Updated the background processes to run as jobs on Azure, to fetch template files from file storage and changed both the API and the jobs to read connection details from Azure Key Vault.</li>
             <li>Applied database changes through scripts and validated them with test scripts and manual testing of business-critical flows.</li>
           </ul>
           <h4>The result</h4>
           <p>All tenants now run from a single App Service setup, which reduced Azure infrastructure cost and simplified deployments.</p>
-          <p class="tech"><i>Azure App Service</i><i>Key Vault</i><i>Application Insights</i><i>SQL Server</i><i>ASP.NET Core</i></p>
+          <p class="tech"><i>Azure App Service</i><i>Key Vault</i><i>Application Insights</i><i>File Storage</i><i>SQL Server</i><i>ASP.NET Core</i></p>
         </article>
 
         <article id="memory-issue">
@@ -298,7 +301,8 @@
         <div><dt>Data &amp; messaging</dt><dd>SQL Server (T-SQL) · Confluent Kafka</dd></div>
         <div><dt>Cloud &amp; DevOps</dt><dd>Microsoft Azure · App Service · Key Vault · Application Insights · Azure DevOps CI/CD · Git</dd></div>
         <div><dt>Frontend</dt><dd>Angular · TypeScript · JavaScript</dd></div>
-        <div><dt>Practices</dt><dd>REST APIs · SOLID · Dependency Injection · xUnit · Agile Scrum</dd></div>
+        <div><dt>Practices</dt><dd>REST APIs · SOLID · Dependency Injection · Agile Scrum</dd></div>
+        <div><dt>Testing</dt><dd>Unit Testing · xUnit  · TDD</dd></div>
       </dl>
 
       <div class="creds">
@@ -311,7 +315,7 @@
           <ul class="cert-list">
             <li><b>Microsoft Certified: Azure Fundamentals (AZ-900)</b><span>Technical</span></li>
             <li><b>AI Dojo, Generative AI Certification</b><span>Technical</span></li>
-            <li><b>AHIP- AHM 250 : An Healthcare fundamentals</b><span>Healthcare domain</span></li>
+            <li><b>AHIP- AHM 250 : Healthcare fundamentals</b><span>Healthcare domain</span></li>
             <li><b>UnitedHealthcare Medicaid certification (all levels)</b><span>Healthcare domain</span></li>
           </ul>
         </div>

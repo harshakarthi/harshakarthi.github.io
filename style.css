@@ -86,6 +86,7 @@ h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -.02em
     var(--paper);
   color: var(--ink); padding-block: 72px 32px;
 }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; }
 .hero-text { max-width: 760px; }
 
 .status {
@@ -109,7 +110,7 @@ h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -.02em
 .socials a { color: var(--muted); text-decoration: none; }
 .socials a:hover { color: var(--ink); }
 
-.hero-photo { justify-self: center; }
+.hero-photo { justify-self: end; }
 .hero-photo img {
   display: block; width: min(320px, 100%); aspect-ratio: 1;
   object-fit: cover; border-radius: 50%;
@@ -293,6 +294,7 @@ section { padding-block: 64px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .hero-photo img { width: 220px; }
   .creds { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -305,6 +307,7 @@ section { padding-block: 64px; }
   .about-grid, .skills > div { grid-template-columns: 1fr; }
   .cases { grid-template-columns: 1fr; }
   .contact-cards { grid-template-columns: 1fr; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-photo { order: -1; justify-self: start; }
   .hero-photo img { width: 160px; }
   /* Pop-up becomes a full-screen sheet on phones */
