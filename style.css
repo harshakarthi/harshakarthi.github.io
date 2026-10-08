@@ -39,7 +39,7 @@ body {
 body.modal-open { overflow: hidden; }
 
 a { color: var(--cobalt); text-underline-offset: 3px; }
-h1, h2, h3, h4 { font-family: var(--f-display); line-height: 1.1; text-wrap: balance; }
+h1, h2, h3, h4, h5 { font-family: var(--f-display); line-height: 1.1; text-wrap: balance; }
 h2::after { content: ""; display: block; width: 40px; height: 4px; border-radius: 4px; background: var(--accent); margin-top: 12px; }
 h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -.02em; }
 :focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 6px; }
@@ -170,11 +170,19 @@ section { padding-block: 64px; }
 .case:hover .case-more::after { margin-left: 4px; }
 
 /* ---------- Experience timeline ---------- */
-.company { margin: -8px 0 36px; max-width: 100%; }
+.company { margin: -8px 0 24px; max-width: 100%; }
 .company h3 { font-size: 28px; font-weight: 700; letter-spacing: -.02em; }
 .company p { color: var(--muted); margin-top: 4px; }
 .company-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 16px; }
 .company .company-system { color: var(--ink); font-weight: 600; margin-top: 6px; }
+/* Project blocks inside Career (Project 1, Project 2) */
+.project { margin-top: 8px; }
+.project + .project { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line); }
+.project-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+.project-name { font-size: 22px; font-weight: 700; letter-spacing: -.01em; margin: 4px 0 12px; }
+.project-desc { display: grid; grid-template-columns: 110px minmax(0, 1fr); align-items: baseline; gap: 2px 12px; color: var(--muted); max-width: 86ch; margin-top: 8px; line-height: 1.55; }
+.pd-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink); }
+.project .timeline { margin-top: 28px; }
 /* Dots and line share one centre line (--axis), so they always stay aligned */
 .timeline {
   --axis: 10px;   /* distance of the centre line from the left edge */
@@ -199,7 +207,7 @@ section { padding-block: 64px; }
   background: #c3d2f5;
 }
 .tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
-.tl-head h4 { font-size: 20px; font-weight: 600; }
+.tl-head h4, .tl-head h5 { font-size: 20px; font-weight: 600; }
 .date { font: 500 14px var(--f-mono); color: var(--muted); }
 .tl-sum { margin-top: 8px; max-width: 68ch; }
 .tl-highlight { margin-top: 14px; max-width: 68ch; background: var(--paper); border-left: 3px solid var(--accent); border-radius: 8px; padding: 12px 16px; font-size: 15.5px; }
@@ -307,6 +315,7 @@ section { padding-block: 64px; }
   .about-grid, .skills > div { grid-template-columns: 1fr; }
   .cases { grid-template-columns: 1fr; }
   .contact-cards { grid-template-columns: 1fr; }
+  .project-desc { grid-template-columns: 1fr; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-photo { order: -1; justify-self: start; }
   .hero-photo img { width: 160px; }
